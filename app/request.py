@@ -1,5 +1,5 @@
 import urllib.request,json
-from .models import news
+from .models import News
 # News = news.News
 
 # Getting api key
@@ -45,7 +45,7 @@ def process_result(source_list):
        publishedAt = source_item.get('publishedAt')
 
        if urlToImage:
-           source_object = news(source,author,title,description,url,urlToImage,publishedAt)
+           source_object = News(source,author,title,description,url,urlToImage,publishedAt)
            source_result.append(source_object)
 
     return source_result
@@ -71,18 +71,4 @@ def get_news(source):
 
     return news_object
 
-def create_app(config_name):
-    app = Flask(__name__)
-
-    # Creating the app configurations
-    app.config.from_object(config_options[config_name])
-
-    # Initializing flask extensions
-    bootstrap.init_app(app)
-
-    # Registering the blueprint
-    from .main import main as main_blueprint
-    app.register_blueprint(main_blueprint)
-
-    return app
 

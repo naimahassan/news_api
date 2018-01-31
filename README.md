@@ -12,10 +12,13 @@ This will be updated as the app goes on. If you find any bug please notify throu
 
 Technologies Used
 Python
+html
+bootstrap
+
 Support and contact details
 Contacts
 License
-Copyright (c) 2017 Vincent Muya
+Copyright (c) 2018 
 
 # {News-HighLight}
 
